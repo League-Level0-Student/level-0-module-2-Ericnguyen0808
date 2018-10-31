@@ -6,6 +6,7 @@ package random;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -78,9 +79,13 @@ public class RockPaperScissors extends JPanel implements ActionListener{
 
         //2. Change the value of opponentSelection to be a random number between 0 and 2;
 	//   Don't forget to create a Random object.
+    Random r = new Random();
+	int number = r.nextInt(3);    
+    int opponentSelection = r.nextInt(3);
 	    
+	
         //2. Change the value of opponentSelection to be a random number between 0 and 2; 
-        int opponentSelection = 0;
+   
         
         //3. Run the program again. Is the result different?
  
@@ -92,14 +97,15 @@ public class RockPaperScissors extends JPanel implements ActionListener{
             selection = 2;
         }
         
-        JOptionPane.showMessageDialog(null, "You chose: " + convertSelection(selection) + ".\n"
-                    + "The computer chose: " + convertSelection(opponentSelection) + ".\n");
+        int opponentSelection1 = 0;
+		JOptionPane.showMessageDialog(null, "You chose: " + convertSelection(selection) + ".\n"
+                    + "The computer chose: " + convertSelection(opponentSelection1) + ".\n");
         
-        if(selection == opponentSelection){
+        if(selection == opponentSelection1){
             JOptionPane.showMessageDialog(null, "No Winner.  Play again.");
-        }else if((selection == 0 && opponentSelection == 2) || 
-                 (selection == 1 && opponentSelection == 0) ||
-                 (selection == 2 && opponentSelection == 1)){
+        }else if((selection == 0 && opponentSelection1 == 2) || 
+                 (selection == 1 && opponentSelection1 == 0) ||
+                 (selection == 2 && opponentSelection1 == 1)){
             JOptionPane.showMessageDialog(null, "You Win!");
         }else{
             JOptionPane.showMessageDialog(null, "You Lose!");

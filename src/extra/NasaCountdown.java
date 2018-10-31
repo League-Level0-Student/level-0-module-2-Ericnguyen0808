@@ -27,10 +27,9 @@ public class NasaCountdown {
 			// 4. Use the speak method to hear the countdown.
 		
 			// 6. Use the following code to make the program wait one second for each number: Thread.sleep(1000);
-		
+		Thread.sleep(1000);
 		// 5. when the counting is done, speak "blastoff!"
 	}
-
 static void speak(String words) {
    	 try {
    		 Runtime.getRuntime().exec("say " + words).waitFor();
