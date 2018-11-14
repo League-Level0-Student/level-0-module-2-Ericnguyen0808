@@ -35,6 +35,7 @@ static void speak(String words) {
    		 Runtime.getRuntime().exec("say " + words).waitFor();
    	 } catch (Exception e) {
    		 e.printStackTrace();
+   		 
    	 }
   }
 }
