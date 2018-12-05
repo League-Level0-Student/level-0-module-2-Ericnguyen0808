@@ -39,7 +39,7 @@ robot.setSpeed(8);
 			// 15. decrease the Y position by star size. See Figure 3.
 		yposition= yposition - starsize;
 			// 16. Increase the star size by 20
-		int starsize=25+20;
+		starsize= starsize +20;
 			// 17. Turn the robot 12 degrees
 	
 			// 18. Make each star a different random color like in Figure 4. 
