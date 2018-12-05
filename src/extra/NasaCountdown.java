@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  **/
 
 public class NasaCountdown {
+	private static final String BlastOff = null;
 	public static void main(String[] args) throws InterruptedException {
 		// 2. Use a pop-up to ask the user where to start counting from
 		String input = JOptionPane.showInputDialog("What time do you want the rocket to start counting from?");
@@ -25,9 +26,9 @@ public class NasaCountdown {
 		// 1. Print a countdown from 10 to 0 on the console
 		
 			// 4. Use the speak method to hear the countdown.
-		for(int i=10; i>=0; i--) {
-			System.out.println(i);
-			speak(i+"");
+		for(int i1=10; i1>=0; i1--) {
+			System.out.println(i1);
+			speak(i1+"");
 		}
 			// 6. Use the following code to make the program wait one second for each number: Thread.sleep(1000);
 		
